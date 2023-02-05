@@ -1,0 +1,17 @@
+﻿@model FinalTUFOD.Models.Classes.Icons
+@{
+    ViewBag.Title = "newIcon";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<!--yeni ikonu veritabanına da eklememizi sağlayan bağlantı-->
+<h2>ADD NEW ICON</h2><br />
+<form class="form-group" method="post">
+    @Html.LabelFor(x => x.icon)
+    @Html.TextBoxFor(x => x.icon, new {@class = "form-control"})
+    <br />
+    @Html.LabelFor(x => x.link)
+    @Html.TextBoxFor(x => x.link, new {@class = "form-control"})
+    <br />
+    <button class="btn btn-primary">ADD ICON</button>
+</form> 
+

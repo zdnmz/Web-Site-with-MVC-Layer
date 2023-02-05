@@ -1,0 +1,25 @@
+﻿@using FinalTUFOD.Models.Classes
+@model List<HomePage>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<h4 class="mb-4">HOME PAGE</h4>
+<table class="table table-bordered mt-3">
+    <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>UPDATE</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.id</td>
+            <td>@x.name</td>
+            <td><a href="/Admin/GoToHomePage/@x.id" class="btn btn-primary">UPDATE</a></td>
+        </tr>
+    }
+
+</table>
+

@@ -1,0 +1,118 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	color:white;
+	font-family: sans-serif;
+	min-height: 100vh;
+	background-image: url(images/bg.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: bottom;	
+}
+
+.aboutHim{
+	width: 400px;
+}
+.social{
+	margin-top: 20px;
+}
+.news{
+	width: 400px;
+	margin-top: 30px;
+}
+.news h1{
+	margin-bottom: 10px;
+}
+.read-more-state {
+  display: none;
+}
+
+.read-more-target {
+  opacity: 0;
+  max-height: 0;
+  font-size: 0;
+  transition: .25s ease;
+}
+
+.read-more-state:checked ~ .read-more-wrap .read-more-target {
+  opacity: 1;
+  font-size: inherit;
+  max-height: 999em;
+}
+
+.read-more-state ~ .read-more-trigger:before {
+  content: 'Show More';
+}
+
+.read-more-state:checked ~ .read-more-trigger:before {
+  content: 'Show Less';
+}
+
+.read-more-trigger {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 .5em;
+  color: gray;
+  font-size: .7em;
+  line-height: 2;
+  border: 1px solid;
+  border-radius: .25em;
+  margin-bottom: 10px;
+}
+
+/* Other style */ 
+body {
+  padding: 2%;
+}
+
+.read-more-wrap {
+  padding: 2%;
+  border: 1px solid;
+  border-radius: .25em;
+}
+div.social i{
+	padding: 0 5px;
+	margin-top: 2px;
+	font-size: 20px;
+	color: rgba(255,255,255,0.6);
+}
+div.social i:hover{
+	color: #7C728A;
+}
+
+@media screen and (max-width: 700px) {
+	.center {
+		width: 300px;
+		height: 500px;
+	}
+
+	h1 {
+		font-size: 20px;
+	}
+
+	h4 {
+		font-size: 14px;
+	}
+
+	.read-more-wrap {
+		width: 90%;
+		font-size: 12px;
+	}
+
+	.social a i {
+		font-size: 15px;
+	}
+	
+}
+.adminLogin {
+	text-align:right;
+	padding: 0 5px;
+	margin-top: 2px;
+	font-size: 15px;
+	color: rgba(255,255,255,0.6);
+}
+.adminLogin i:hover {
+	color: #7C728A;
+}

@@ -1,0 +1,52 @@
+﻿@model FinalTUFOD.Models.Classes.HomePage
+@{
+    ViewBag.Title = "UpdateHomePage";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<!-- anasayfadaki verileri güncelleme ekranı -->
+<h2 class="mt-4">Update Home Page</h2> 
+<hr />
+@using (Html.BeginForm("UpdateHomePage", "Admin", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.id) // id değiştirilemez sadece okunabilir
+    @Html.TextBoxFor(x => x.id, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(x => x.name)
+    @Html.TextBoxFor(x => x.name, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.content)
+    @Html.TextBoxFor(x => x.content, new { @class = "form-control"})
+    <br />
+    @Html.LabelFor(x => x.newshead)
+    @Html.TextBoxFor(x => x.newshead, new { @class = "form-control"})
+    <br />
+    @Html.LabelFor(x => x.contant)
+    @Html.TextBoxFor(x => x.contant, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.news1head)
+    @Html.TextBoxFor(x => x.news1head, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.news2head)
+    @Html.TextBoxFor(x => x.news2head, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.news3head)
+    @Html.TextBoxFor(x => x.news3head, new { @class = "form-control"})
+    <br />
+    @Html.LabelFor(x => x.news4head)
+    @Html.TextBoxFor(x => x.news4head, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.news1)
+    @Html.TextBoxFor(x => x.news1, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.news2)
+    @Html.TextBoxFor(x => x.news2, new { @class = "form-control"})
+    <br />
+    @Html.LabelFor(x => x.news3)
+    @Html.TextBoxFor(x => x.news3, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.news4)
+    @Html.TextBoxFor(x => x.news4, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">UPDATE</button>
+}
+

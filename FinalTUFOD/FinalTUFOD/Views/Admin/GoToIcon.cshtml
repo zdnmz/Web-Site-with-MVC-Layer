@@ -1,0 +1,22 @@
+﻿@model FinalTUFOD.Models.Classes.Icons
+@{
+    ViewBag.Title = "GoToIcon";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<!-- ikon anasayfasındaki verileri güncelleme ekranı -->
+<h2>Update Icon</h2>
+<br />
+@using (Html.BeginForm("UpdateIcon", "Admin", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.id) // id değiştirilemez sadece okunabilir
+    @Html.TextBoxFor(x => x.id, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(x => x.icon)
+    @Html.TextBoxFor(x => x.icon, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.link)
+    @Html.TextBoxFor(x => x.link, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">UPDATE</button>
+}
+

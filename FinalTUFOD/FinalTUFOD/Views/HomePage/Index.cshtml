@@ -1,0 +1,54 @@
+﻿@using FinalTUFOD.Models.Classes
+@model List<HomePage>
+
+@{
+    Layout = null;
+}
+<!--anasayfadaki verilerin veritabanından çekilmesini sağlayan bağlantıların olduğu sayfa-->
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="veiwport" content="width=device-width, initial-scale=1.0">
+    <title>TUFOD</title>
+    <link rel="stylesheet" type="text/css" href="~/Web-Tufod-Index/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <div class="adminLogin"> <!--admin sayfasına yönlendiren alan-->
+        <a href="/Admin/Index"><i class="fas fa-user"></i></a>
+    </div>
+    <div class="center">
+        <div class="aboutHim">
+            @foreach (var x in Model)
+            {
+                <h1><b><u>@x.name</u></b></h1>
+                <p>@x.content</p><br />
+                <h1><u>@x.newshead</u></h1>
+                <div class="newsContent">
+                    <input type="checkbox" class="read-more-state" id="post-1" />
+                    <div class="read-more-wrap"> <p>@x.news1head <span class="read-more-target"> @x.news1</span></p></div>
+                    <label for="post-1" class="read-more-trigger"></label>
+                </div>
+                <div class="newsContent">
+                    <input type="checkbox" class="read-more-state" id="post-2" />
+                    <div class="read-more-wrap"><p>@x.news2head <span class="read-more-target">  @x.news2</span></p></div>
+                    <label for="post-2" class="read-more-trigger"></label>
+                </div>
+                <div class="newsContent">
+                    <input type="checkbox" class="read-more-state" id="post-3" />
+                    <div class="read-more-wrap"><p>@x.news3head  <span class="read-more-target"> @x.news3</span></p></div>
+                    <label for="post-3" class="read-more-trigger"></label>
+                </div>
+                <div class="newsContent">
+                    <input type="checkbox" class="read-more-state" id="post-4" />
+                    <div class="read-more-wrap"><p>@x.news4head <span class="read-more-target"> @x.news4</span></p></div>
+                    <label for="post-4" class="read-more-trigger"></label>
+                </div><br />
+                <h4>@x.contant</h4>
+            }
+        </div>
+        @Html.Action("icons", "HomePage")
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+﻿@using FinalTUFOD.Models.Classes
+@model List<Icons>
+@{
+    ViewBag.Title = "iconList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<h4 class="mb-4">ICON PAGE</h4>
+<table class="table table-bordered">
+    <tr>
+        <!--ikon anasayfası tablosu-->
+        <th>ID</th>
+        <th>ICON</th>
+        <th>UPDATE</th>
+        <th>DELETE</th>
+    </tr>
+    @foreach (var x in Model)
+    {<!--ikon anasayfası veritabanı bağlantısı-->
+        <tr>
+            <td>@x.id</td>
+            <td><i class="@x.icon"></i></td>
+            <td><a href="/Admin/GoToIcon/@x.id" class="btn btn-primary">UPDATE</a></td>
+            <td><a href="/Admin/DeleteIcon/@x.id" class="btn btn-danger">DELETE</a></td>
+        </tr>
+    }
+</table>
+<a href="/Admin/newIcon/" class="btn btn-primary">ADD NEW ICON</a>
+

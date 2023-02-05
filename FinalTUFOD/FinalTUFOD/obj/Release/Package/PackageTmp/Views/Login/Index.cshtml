@@ -1,0 +1,33 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TUFOD ADMIN PANELİ</title>
+    <link rel="stylesheet" href="~/Web-Admin-Login/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="contact-form">
+            <a href="/HomePage/Index/"><img src="~/Web-Admin-Login/img/photo.png" class="admin-img"></a> <!--anasayfaya yönlendiren alan-->
+            <h2><u>Admin Login</u></h2>
+            @using (Html.BeginForm("Index", "Login", FormMethod.Post))
+            { <!--kullanıcı giriş alanı-->
+                <div class="txtb">
+                    <input type="text" name="username" placeholder="Username">
+                </div>
+                <div class="txtb">
+                    <input type="password" name="password" placeholder="Password">
+                </div>
+                <input type="submit" class="logbtn" value="Log In">
+            }
+        </div>
+    </div>
+</body>
+</html>
